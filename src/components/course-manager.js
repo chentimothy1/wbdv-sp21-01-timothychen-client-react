@@ -52,28 +52,6 @@ class CourseManagerContainer extends React.Component {
     }
 
 
-    deleteModule = moduleId => {
-        this.courseService.deleteModule(moduleId)
-        this.setState({
-            courses: this.courseService.findAllCourses()
-        })
-    }
-
-    deleteTopic = topic => {
-        this.courseService.deleteTopic(topic)
-        this.setState({
-            courses: this.courseService.findAllCourses()
-        })
-    }
-
-
-
-    updateModule = (id, title) => {
-        this.courseService.updateModule(id, title);
-        this.setState({
-            courses: this.courseService.findAllCourses()
-        })
-    }
 
 
 
