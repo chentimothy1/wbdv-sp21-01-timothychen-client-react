@@ -1,9 +1,9 @@
 import React from 'react';
-import './CourseTableComponent.style.css';
-// import CourseAdd from './';
+import './course-table.style.css';
+import CourseAdd from './course-add';
 import CourseRow from './course-row';
-import CourseHeader from './course-header.js';
-import CourseFooter from './course-footer.js';
+import CourseHeader from './course-header';
+import CourseFooter from './course-footer';
 
 const CourseTable =({courses, deleteCourse, addCourse})=> {
     console.log("Render table");

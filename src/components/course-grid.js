@@ -1,9 +1,9 @@
 import React from 'react';
-import './CourseTableComponent.style.css';
-import CourseAdd from './CourseAddComponent';
+import './course-table.style.css';
+import CourseAdd from './course-add';
 import CourseCard from './course-card';
-import CourseHeader from './CourseHeaderComponent';
-import Footer from './FooterComponent';
+import CourseHeader from './course-header';
+import CourseFooter from './course-footer';
 
 const CourseGrid = ({ courses, deleteCourse, addCourse }) =>
     <div>
@@ -21,7 +21,7 @@ const CourseGrid = ({ courses, deleteCourse, addCourse }) =>
                 }
             </div>
         </div>
-        <Footer />
+        <CourseFooter />
     </div>
 
 export default CourseGrid;

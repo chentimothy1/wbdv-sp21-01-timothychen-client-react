@@ -1,11 +1,11 @@
 import React from 'react';
-import CourseTable from './course-table';
-import CourseGrid from './course-grid';
-import CourseService from './course-service';
-import CourseEditor from './course-editor';
+import CourseTable from '../components/course-table';
+import CourseGrid from '../components/course-grid';
+import CourseService from "../services/course-service";
+import CourseEditor from "../components/course-editor";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-class CourseManagerContainer extends React.Component {
+class CourseManager extends React.Component {
 
     constructor(props) {
         super(props);
@@ -52,7 +52,38 @@ class CourseManagerContainer extends React.Component {
     }
 
 
+    deleteModule = moduleId => {
+        this.courseService.deleteModule(moduleId)
+        this.setState({
+            courses: this.courseService.findAllCourses()
+        })
+    }
 
+    deleteTopic = topic => {
+        this.courseService.deleteTopic(topic)
+        this.setState({
+            courses: this.courseService.findAllCourses()
+        })
+    }
+
+
+
+    updateModule = (id, title) => {
+        this.courseService.updateModule(id, title);
+        this.setState({
+            courses: this.courseService.findAllCourses()
+        })
+    }
+
+    findCourseById = courseId => {
+        return this.courseService.findCourseById(courseId)
+        /*for(let i = 0 ; i < this.state.courses.length ; i++) {
+            if(this.state.courses[i] == courseId) {
+                return this.state.courses[i];
+            }
+        }*/
+        return null;
+    }
 
 
 
@@ -91,4 +122,4 @@ class CourseManagerContainer extends React.Component {
     }
 }
 
-export default CourseManagerContainer;
+export default CourseManager;
