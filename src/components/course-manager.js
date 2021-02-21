@@ -1,8 +1,8 @@
 import React from 'react';
-import CourseTable from '../components/course-table';
-import CourseGrid from '../components/course-grid';
+import CourseTable from './course-table';
+import CourseGrid from './course-grid';
 import CourseService from "../services/course-service";
-import CourseEditor from "../components/course-editor";
+import CourseEditor from "./course-editor";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class CourseManager extends React.Component {
@@ -15,7 +15,7 @@ class CourseManager extends React.Component {
             courses: []
         }
     }
-
+    
     componentDidMount() {
         this.updateCourseList();
     }
