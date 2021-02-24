@@ -58,7 +58,6 @@ class LessonTabs extends React.Component{
         })
     }
 
-
     render(){
         return(
             <div className="collapse navbar-collapse"
