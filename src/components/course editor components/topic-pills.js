@@ -91,6 +91,5 @@ class TopicPills extends React.Component{
         )
     }
 }
-   
 
 export default TopicPills
